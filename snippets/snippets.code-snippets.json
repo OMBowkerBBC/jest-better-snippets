@@ -66,7 +66,7 @@
 	"describe": {
 		"prefix": ["des", "desc"],
 		"body": [
-			"describe('$1', () => {", "\t$2", "})"
+			"describe('${1:suite description}', () => {", "\t$2", "})"
 		],
 		"description": "Basic describe block."
 	},
@@ -74,7 +74,7 @@
 	"describe-each": {
 		"prefix": ["dese", "desce"],
 		"body": [
-			"describe.each([$1])('$2', ($3) => {", "\t$4", "})"
+			"describe.each([$1])('${2:suite description}', (${3:varName}) => {", "\t$4", "})"
 		],
 		"description": "describe with each."
 	},
@@ -82,7 +82,7 @@
 	"describe-only": {
 		"prefix": ["deso", "desco"],
 		"body": [
-			"describe.only('$1', () => {", "\t$2", "})"
+			"describe.only('${1:suite description}', () => {", "\t$2", "})"
 		],
 		"description": "describe with only."
 	},
@@ -90,7 +90,7 @@
 	"describe-skip": {
 		"prefix": ["dess", "descs"],
 		"body": [
-			"describe.skip('$1', () => {", "\t$2", "})"
+			"describe.skip('${1:suite description}', () => {", "\t$2", "})"
 		],
 		"description": "describe with skip."
 	},
@@ -98,7 +98,7 @@
 	"describe-async": {
 		"prefix": ["desa", "desca"],
 		"body": [
-			"describe('$1', async () => {", "\t$2", "})"
+			"describe('${1:suite description}', async () => {", "\t$2", "})"
 		],
 		"description": "describe with async."	
 	},
@@ -106,7 +106,7 @@
 	"describe-with-after-all": {
 		"prefix": ["daa", "descaa"],
 		"body": [
-			"describe('$1', () => {", "\tafterAll(() => {", "\t\t$2", "\t})", "})"
+			"describe('${1:suite description}', () => {", "\tafterAll(() => {", "\t\t$2", "\t})", "})"
 		],
 		"description": "describe with afterAll."
 	},
@@ -114,7 +114,7 @@
 	"describe-with-after-all-async": {
 		"prefix": ["daaa", "descaaa"],
 		"body": [
-			"describe('$1', () => {", "\tafterAll(async () => {", "\t\t$2", "\t})", "})"
+			"describe('${1:suite description}', () => {", "\tafterAll(async () => {", "\t\t$2", "\t})", "})"
 		],
 		"description": "describe with afterAll async."
 	},
@@ -122,7 +122,7 @@
 	"describe-with-after-each": {
 		"prefix": ["dae", "descae"],
 		"body": [
-			"describe('$1', () => {", "\tafterEach(() => {", "\t\t$2", "\t})", "})"
+			"describe('${1:suite description}', () => {", "\tafterEach(() => {", "\t\t$2", "\t})", "})"
 		],
 		"description": "describe with afterEach."
 	},
@@ -130,7 +130,7 @@
 	"describe-with-after-each-async": {
 		"prefix": ["daea", "descaea"],
 		"body": [
-			"describe('$1', () => {", "\tafterEach(async () => {", "\t\t$2", "\t})", "})"
+			"describe('${1:suite description}', () => {", "\tafterEach(async () => {", "\t\t$2", "\t})", "})"
 		],
 		"description": "describe with afterEach."
 	},
@@ -138,7 +138,7 @@
 	"describe-with-before-all": {
 		"prefix": ["dba", "descba"],
 		"body": [
-			"describe('$1', () => {", "\tbeforeAll(() => {", "\t\t$2", "\t})", "})"
+			"describe('${1:suite description}', () => {", "\tbeforeAll(() => {", "\t\t$2", "\t})", "})"
 		],
 		"description": "describe with beforeAll."
 	},
@@ -146,7 +146,7 @@
 	"describe-with-before-all-async": {
 		"prefix": ["dbaa", "descbaa"],
 		"body": [
-			"describe('$1', () => {", "\tbeforeAll(async () => {", "\t\t$2", "\t})", "})"
+			"describe('${1:suite description}', () => {", "\tbeforeAll(async () => {", "\t\t$2", "\t})", "})"
 		],
 		"description": "describe with beforeAll async."
 	},
@@ -154,7 +154,7 @@
 	"describe-with-before-each": {
 		"prefix": ["dbe", "descbe"],
 		"body": [
-			"describe('$1', () => {", "\tbeforeEach(() => {", "\t\t$2", "\t})", "})"
+			"describe('${1:suite description}', () => {", "\tbeforeEach(() => {", "\t\t$2", "\t})", "})"
 		],
 		"description": "describe with beforeEach."
 	},
@@ -162,7 +162,7 @@
 	"describe-with-before-each-async": {
 		"prefix": ["dbea", "descbea"],
 		"body": [
-			"describe('$1', () => {", "\tbeforeEach(async () => {", "\t\t$2", "\t})", "})"
+			"describe('${1:suite description}', () => {", "\tbeforeEach(async () => {", "\t\t$2", "\t})", "})"
 		],
 		"description": "describe with beforeEach async."
 	},
@@ -170,7 +170,7 @@
 	"describe-with-it": {
 		"prefix": ["di", "descit"],
 		"body": [
-			"describe('$1', () => {", "\tit('$2', () => {", "\t\t$3", "\t})", "})"
+			"describe('${1:suite description}', () => {", "\tit('${2:test description}', () => {", "\t\t$3", "\t})", "})"
 		],
 		"description": "describe with it."
 	},
@@ -178,7 +178,7 @@
 	"describe-with-it-async": {
 		"prefix": ["dia", "descita"],
 		"body": [
-			"describe('$1', () => {", "\tit('$2', async () => {", "\t\t$3", "\t})", "})"
+			"describe('${1:suite description}', () => {", "\tit('${2:test description}', async () => {", "\t\t$3", "\t})", "})"
 		],
 		"description": "describe with it async."
 	},
@@ -186,7 +186,7 @@
 	"describe-with-test": {
 		"prefix": ["dt", "desctest"],
 		"body": [
-			"describe('$1', () => {", "\ttest('$2', () => {", "\t\t$3", "\t})", "})"
+			"describe('${1:suite description}', () => {", "\ttest('${2:test description}', () => {", "\t\t$3", "\t})", "})"
 		],
 		"description": "describe with test."
 	},
@@ -194,7 +194,7 @@
 	"describe-with-test-async": {
 		"prefix": ["dta", "desctesta"],
 		"body": [
-			"describe('$1', () => {", "\ttest('$2', async () => {", "\t\t$3", "\t})", "})"
+			"describe('${1:suite description}', () => {", "\ttest('${2:test description}', async () => {", "\t\t$3", "\t})", "})"
 		],
 		"description": "describe with test async."
 	},
@@ -203,12 +203,12 @@
 	"describe-everything-it": {
 		"prefix": ["dei", "descei"],
 		"body": [
-			"describe('$1', () => {",
-			"\tafterAll(() => {", "\t\t$2", "\t})", "",
-			"\tafterEach(() => {", "\t\t$3", "\t})", "",
-			"\tbeforeAll(() => {", "\t\t$4", "\t})", "",
-			"\tbeforeEach(() => {", "\t\t$5", "\t})", "",
-			"\tit(() => {", "\t\texpect($6)", "\t})",
+			"describe('${1:suite description}', () => {",
+			"\tafterAll(${2:async} () => {", "\t\t$3", "\t})", "",
+			"\tafterEach(${4:async} () => {", "\t\t$5", "\t})", "",
+			"\tbeforeAll(${6:async} () => {", "\t\t$7", "\t})", "",
+			"\tbeforeEach(${8:async} () => {", "\t\t$9", "\t})", "",
+			"\tit('${10:test description}',${11: async} ($12) => {", "\t\texpect($13)", "\t})",
 			"})"
 		],
 		"description": "describe with everything it."
@@ -217,21 +217,21 @@
 	"describe-everything-test": {
 		"prefix": ["det", "descet"],
 		"body": [
-			"describe('$1', () => {",
-			"\tafterAll(() => {", "\t\t$2", "\t})", "",
-			"\tafterEach(() => {", "\t\t$3", "\t})", "",
-			"\tbeforeAll(() => {", "\t\t$4", "\t})", "",
-			"\tbeforeEach(() => {", "\t\t$5", "\t})", "",
-			"\ttest(() => {", "\t\texpect($6)", "\t})",
+			"describe('${1:suite description}', () => {",
+			"\tafterAll(${2:async} () => {", "\t\t$3", "\t})", "",
+			"\tafterEach(${4:async} () => {", "\t\t$5", "\t})", "",
+			"\tbeforeAll(${6:async} () => {", "\t\t$7", "\t})", "",
+			"\tbeforeEach(${8:async} () => {", "\t\t$9", "\t})", "",
+			"\ttest('${10:test description}',${11: async} ($12) => {", "\t\texpect($13)", "\t})",
 			"})"
 		],
 		"description": "describe with everything test."
 	},
 
-    "it": {
+	"it": {
 		"prefix": ["it"],
 		"body": [
-			"it('$1', () => {", "\t$2", "})"
+			"it('${1:test description}', () => {", "\t$2", "})"
 		],
 		"description": "Basic it block."
 	},
@@ -239,7 +239,7 @@
 	"it-each": {
 		"prefix": ["ite"],
 		"body": [
-			"it.each([$1])('$2', ($3) => {", "\t$4", "})"
+			"it.each([$1])('${2:test description}',${3: async} (${4:varName}) => {", "\t$5", "})"
 		],
 		"description": "it with each."
 	},
@@ -247,7 +247,7 @@
 	"it-only": {
 		"prefix": ["ito"],
 		"body": [
-			"it.only('$1', () => {", "\t$2", "})"
+			"it.only('${1:test description}',${2: async} () => {", "\t$3", "})"
 		],
 		"description": "it with only."
 	},
@@ -255,7 +255,7 @@
 	"it-skip": {
 		"prefix": ["its"],
 		"body": [
-			"it.skip('$1', () => {", "\t$2", "})"
+			"it.skip('${1:test description}',${2: async} () => {", "\t$3", "})"
 		],
 		"description": "it with skip."
 	},
@@ -263,7 +263,7 @@
 	"it-todo": {
 		"prefix": ["itt"],
 		"body": [
-			"it.todo('$1', () => {", "\t$2", "})"
+			"it.todo('${1:test description}',${2: async} () => {", "\t$3", "})"
 		],
 		"description": "it with todo."
 	},
@@ -271,7 +271,7 @@
 	"it-async": {
 		"prefix": ["ita"],
 		"body": [
-			"it('$1', async () => {", "\t$2", "})"
+			"it('${1:test description}', async () => {", "\t$2", "})"
 		],
 		"description": "it with async."
 	},
@@ -279,7 +279,7 @@
 	"it-with-expect": {
 		"prefix": ["itwe"],
 		"body": [
-			"it('$1', () => {", "\texpect($2)", "})"
+			"it('${1:test description}',${2: async} () => {", "\texpect($3)", "})"
 		],
 		"description": "it with expect statement."
 	},
@@ -287,8 +287,8 @@
 	"it-pair": {
 		"prefix": ["it2", "itp"],
 		"body": [
-			"it('$1', () => {", "\t$2", "})", "",
-			"it('$3', () => {", "\t$4", "})", ""
+			"it('${1:test description}', () => {", "\t$2", "})", "",
+			"it('${3:test description}', () => {", "\t$4", "})", ""
 		],
 		"description": "it pair."
 	},
@@ -296,8 +296,8 @@
 	"it-pair-async": {
 		"prefix": ["it2a", "itpa"],
 		"body": [
-			"it('$1', async () => {", "\t$2", "})", "",
-			"it('$3', async () => {", "\t$4", "})", ""
+			"it('${1:test description}', async () => {", "\t$2", "})", "",
+			"it('${3:test description}', async () => {", "\t$4", "})", ""
 		],
 		"description": "it pair async."
 	},
@@ -305,7 +305,7 @@
     "test": {
 		"prefix": ["tes"],
 		"body": [
-			"test('$1', () => {", "\t$2", "})"
+			"test('${1:test description}', () => {", "\t$2", "})"
 		],
 		"description": "Basic test block."
 	},
@@ -313,7 +313,7 @@
 	"test-each": {
 		"prefix": ["tese", "teste"],
 		"body": [
-			"test.each([$1])('$2', ($3) => {", "\t$4", "})"
+			"test.each([$1])('${2:test description}',${3: async} (${4:varName}) => {", "\t$5", "})"
 		],
 		"description": "test with each."
 	},
@@ -321,7 +321,7 @@
 	"test-only": {
 		"prefix": ["teso", "testo"],
 		"body": [
-			"test.only('$1', () => {", "\t$2", "})"
+			"test.only('${1:test description}',${2: async} () => {", "\t$3", "})"
 		],
 		"description": "test with only."
 	},
@@ -329,7 +329,7 @@
 	"test-skip": {
 		"prefix": ["tess", "tests"],
 		"body": [
-			"test.skip('$1', () => {", "\t$2", "})"
+			"test.skip('${1:test description}',${2: async} () => {", "\t$3", "})"
 		],
 		"description": "test with skip."
 	},
@@ -337,7 +337,7 @@
 	"test-todo": {
 		"prefix": ["testt"],
 		"body": [
-			"test.todo('$1', () => {", "\t$2", "})"
+			"test.todo('${1:test description}',${2: async} () => {", "\t$3", "})"
 		],
 		"description": "test with todo."
 	},
@@ -345,7 +345,7 @@
 	"test-async": {
 		"prefix": ["tesa", "testa"],
 		"body": [
-			"test('$1', async () => {", "\t$2", "})"
+			"test('${1:test description}', async () => {", "\t$2", "})"
 		],
 		"description": "test with async."
 	},
@@ -353,7 +353,7 @@
 	"test-with-expect": {
 		"prefix": ["twe", "testwe"],
 		"body": [
-			"test('$1', () => {", "\texpect($2)", "})"
+			"test('${1:test description}',${2: async} () => {", "\texpect($3)", "})"
 		],
 		"description": "test with expect statement."
 	},
@@ -361,8 +361,8 @@
 	"test-pair": {
 		"prefix": ["t2", "testp"],
 		"body": [
-			"test('$1', () => {", "\t$2", "})", "",
-			"test('$3', () => {", "\t$4", "})", ""
+			"test('${1:test decription}', () => {", "\t$2", "})", "",
+			"test('${3:test decription}', () => {", "\t$4", "})", ""
 		],
 		"description": "test pair."
 	},
@@ -370,8 +370,8 @@
 	"test-pair-async": {
 		"prefix": ["t2a", "testpa"],
 		"body": [
-			"test('$1', async () => {", "\t$2", "})", "",
-			"test('$3', async () => {", "\t$4", "})", ""
+			"test('${1:test decription}', async () => {", "\t$2", "})", "",
+			"test('${3::test decription}', async () => {", "\t$4", "})", ""
 		],
 		"description": "test pair async."
 	}

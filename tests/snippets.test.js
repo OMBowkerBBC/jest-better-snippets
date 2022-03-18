@@ -29,7 +29,7 @@ describe('snippets test suite', () => {
     })
     
     it('should always have a tabstop in the body', () => {
-        keys.forEach((item) => expect(snippets[item]['body'].join("")).toContain("$1"))
+        keys.forEach((item) => expect(snippets[item]['body'].join("")).toMatch(/\$\d/))
     })
 
     it('should have corresponding name in description attribute', () => {
