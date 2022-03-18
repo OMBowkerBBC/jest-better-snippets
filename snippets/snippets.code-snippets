@@ -1,1 +1,137 @@
-{}
+{
+	"describe": {
+		"prefix": ["des", "desc"],
+		"body": [
+			"describe('$1', () => {", "\t$2", "})"
+		],
+		"description": "Basic describe block."
+	},
+
+	"describe-each": {
+		"prefix": ["dese", "desce"],
+		"body": [
+			"describe.each([$1])('$2', ($3) => {", "\t$4", "})"
+		],
+		"description": "describe with each."
+	},
+
+	"describe-only": {
+		"prefix": ["deso", "desco"],
+		"body": [
+			"describe.only('$1', () => {", "\t$2", "})"
+		],
+		"description": "describe with only."
+	},
+
+	"describe-skip": {
+		"prefix": ["dess", "descs"],
+		"body": [
+			"describe.skip('$1', () => {", "\t$2", "})"
+		],
+		"description": "describe with skip."
+	},
+
+	"describe-async": {
+		"prefix": ["desa", "desca"],
+		"body": [
+			"describe('$1', async () => {", "\t$2", "})"
+		],
+		"description": "describe with async."	
+	},
+
+    "it": {
+		"prefix": ["it"],
+		"body": [
+			"it('$1', () => {", "\t$2", "})"
+		],
+		"description": "Basic it block."
+	},
+
+	"it-each": {
+		"prefix": ["ite"],
+		"body": [
+			"it.each([$1])('$2', ($3) => {", "\t$4", "})"
+		],
+		"description": "it with each."
+	},
+
+	"it-only": {
+		"prefix": ["ito"],
+		"body": [
+			"it.only('$1', () => {", "\t$2", "})"
+		],
+		"description": "it with only."
+	},
+
+	"it-skip": {
+		"prefix": ["its"],
+		"body": [
+			"it.skip('$1', () => {", "\t$2", "})"
+		],
+		"description": "it with skip."
+	},
+
+	"it-todo": {
+		"prefix": ["itt"],
+		"body": [
+			"it.todo('$1', () => {", "\t$2", "})"
+		],
+		"description": "it with todo."
+	},
+
+	"it-async": {
+		"prefix": ["ita"],
+		"body": [
+			"it('$1', async () => {", "\t$2", "})"
+		],
+		"description": "it with async."
+	},
+
+    "test": {
+		"prefix": ["tes"],
+		"body": [
+			"test('$1', () => {", "\t$2", "})"
+		],
+		"description": "Basic test block."
+	},
+
+	"test-each": {
+		"prefix": ["tese", "teste"],
+		"body": [
+			"test.each([$1])('$2', ($3) => {", "\t$4", "})"
+		],
+		"description": "test with each."
+	},
+
+	"test-only": {
+		"prefix": ["teso", "testo"],
+		"body": [
+			"test.only('$1', () => {", "\t$2", "})"
+		],
+		"description": "test with only."
+	},
+
+	"test-skip": {
+		"prefix": ["tess", "tests"],
+		"body": [
+			"test.skip('$1', () => {", "\t$2", "})"
+		],
+		"description": "test with skip."
+	},
+
+	"test-todo": {
+		"prefix": ["testt"],
+		"body": [
+			"test.todo('$1', () => {", "\t$2", "})"
+		],
+		"description": "test with todo."
+	},
+
+	"test-async": {
+		"prefix": ["tesa", "testa"],
+		"body": [
+			"test('$1', async () => {", "\t$2", "})"
+		],
+		"description": "test with async."
+	},
+}
