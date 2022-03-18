@@ -1,4 +1,68 @@
 {
+    "after-all": {
+		"prefix": ["aa"],
+		"body": [
+			"afterAll(() => {", "\t$1", "})"
+		],
+		"description": "Basic afterAll block."
+	},
+
+	"after-all-async": {
+		"prefix": ["aaa"],
+		"body": [
+			"afterAll(async () => {", "\t$1", "})"
+		],
+		"description": "afterAll with async."
+	},
+
+	"after-each": {
+		"prefix": ["ae"],
+		"body": [
+			"afterEach(() => {", "\t$1", "})"
+		],
+		"description": "Basic afterEach block."
+	},
+
+	"after-each-async": {
+		"prefix": ["aea"],
+		"body": [
+			"afterEach(async () => {", "\t$1", "})"
+		],
+		"description": "afterEach with async."
+	},
+
+	"before-all": {
+		"prefix": ["ba"],
+		"body": [
+			"beforeAll(() => {", "\t$1", "})"
+		],
+		"description": "Basic beforeAll block."
+	},
+
+	"before-all-async": {
+		"prefix": ["baa"],
+		"body": [
+			"beforeAll(async () => {", "\t$1", "})"
+		],
+		"description": "beforeAll with async."
+	},
+
+	"before-each": {
+		"prefix": ["be"],
+		"body": [
+			"beforeEach(() => {", "\t$1", "})"
+		],
+		"description": "Basic beforeEach block."
+	},
+
+	"before-each-async": {
+		"prefix": ["bea"],
+		"body": [
+			"beforeEach(async () => {", "\t$1", "})"
+		],
+		"description": "beforeEach with async."
+	},
+    
 	"describe": {
 		"prefix": ["des", "desc"],
 		"body": [
