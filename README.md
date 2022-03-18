@@ -3,10 +3,10 @@
 <img src="./assets/demo.gif" alt="Demo of snippets GIF." align="right" />
 
 <div>
-  
+ 
+![Node Version](https://img.shields.io/badge/node-v14.18.3-blue?logo=Node.js)
+![npm Version](https://img.shields.io/badge/npm-6.14.15-blue)
 ![Release](https://img.shields.io/badge/release-soon-orange)
-![Node Version](https://img.shields.io/badge/node-v14.18.3-brightgreen)
-![npm Version](https://img.shields.io/badge/npm-6.14.15-brightgreen)
   
 </div>
 
@@ -14,7 +14,7 @@ Jest Better Snippets is my attempt at speeding up the development of test writin
 
 Feel free to clone this and add whatever you want, or send me some ideas of things that you'd find helpful and I'll add them to the list.
 
-### Testing ![Tests](https://img.shields.io/badge/tests-passing-brightgreen)
+### Testing ![Tests](https://img.shields.io/badge/tests-passing-brightgreen?logo=Jest)
 The github repo associated with this extension tests the current snippets to make sure they all follow the same guidelines.
 
 ###### To Run
