@@ -2,7 +2,7 @@
     "name": "jest-better-snippets",
     "displayName": "Jest Better Snippets",
     "description": "Snippets for the Jest testing library.",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "scripts": {
         "test": "jest"
     },
