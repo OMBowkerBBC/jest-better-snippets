@@ -370,7 +370,7 @@
 		"prefix": ["t2a", "testpa"],
 		"body": [
 			"test('${1:test decription}', async () => {", "\t$2", "})", "",
-			"test('${3::test decription}', async () => {", "\t$4", "})", ""
+			"test('${3:test decription}', async () => {", "\t$4", "})", ""
 		],
 		"description": "test pair async."
 	}
