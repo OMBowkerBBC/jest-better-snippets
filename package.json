@@ -3,6 +3,9 @@
     "displayName": "Jest Better Snippets",
     "description": "Snippets for the Jest testing library.",
     "version": "0.0.1",
+    "scripts": {
+        "test": "jest"
+    },
     "engines": {
         "vscode": "^1.65.0"
     },
@@ -13,8 +16,12 @@
         "snippets": [
             {
                 "language": "javascript",
-                "path": "./snippets/snippets.code-snippets"
+                "path": "./snippets/snippets.code-snippets.json"
             }
         ]
+    },
+    "devDependencies": {
+        "@types/jest": "^27.4.1",
+        "jest": "^27.5.1"
     }
 }
