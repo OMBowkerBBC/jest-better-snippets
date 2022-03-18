@@ -200,7 +200,7 @@
 	},
 
 
-	"describe_everything-it": {
+	"describe-everything-it": {
 		"prefix": ["dei", "descei"],
 		"body": [
 			"describe('$1', () => {",
@@ -214,7 +214,7 @@
 		"description": "describe with everything it."
 	},
 
-	"describe_everything-test": {
+	"describe-everything-test": {
 		"prefix": ["det", "descet"],
 		"body": [
 			"describe('$1', () => {",
