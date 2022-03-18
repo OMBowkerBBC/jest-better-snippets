@@ -103,6 +103,71 @@
 		"description": "describe with async."	
 	},
 
+	"describe-with-after-all": {
+		"prefix": ["daa", "descaa"],
+		"body": [
+			"describe('$1', () => {", "\tafterAll(() => {", "\t\t$2", "\t})", "})"
+		],
+		"description": "describe with afterAll."
+	},
+
+	"describe-with-after-all-async": {
+		"prefix": ["daaa", "descaaa"],
+		"body": [
+			"describe('$1', () => {", "\tafterAll(async () => {", "\t\t$2", "\t})", "})"
+		],
+		"description": "describe with afterAll async."
+	},
+
+
+	"describe-with-after-each": {
+		"prefix": ["dae", "descae"],
+		"body": [
+			"describe('$1', () => {", "\tafterEach(() => {", "\t\t$2", "\t})", "})"
+		],
+		"description": "describe with afterEach."
+	},
+
+	"describe-with-after-each-async": {
+		"prefix": ["daea", "descaea"],
+		"body": [
+			"describe('$1', () => {", "\tafterEach(async () => {", "\t\t$2", "\t})", "})"
+		],
+		"description": "describe with afterEach."
+	},
+
+	"describe-with-before-all": {
+		"prefix": ["dba", "descba"],
+		"body": [
+			"describe('$1', () => {", "\tbeforeAll(() => {", "\t\t$2", "\t})", "})"
+		],
+		"description": "describe with beforeAll."
+	},
+
+	"describe-with-before-all-async": {
+		"prefix": ["dbaa", "descbaa"],
+		"body": [
+			"describe('$1', () => {", "\tbeforeAll(async () => {", "\t\t$2", "\t})", "})"
+		],
+		"description": "describe with beforeAll async."
+	},
+
+	"describe-with-before-each": {
+		"prefix": ["dbe", "descbe"],
+		"body": [
+			"describe('$1', () => {", "\tbeforeEach(() => {", "\t\t$2", "\t})", "})"
+		],
+		"description": "describe with beforeEach."
+	},
+
+	"describe-with-before-each-async": {
+		"prefix": ["dbea", "descbea"],
+		"body": [
+			"describe('$1', () => {", "\tbeforeEach(async () => {", "\t\t$2", "\t})", "})"
+		],
+		"description": "describe with beforeEach async."
+	},
+
     "it": {
 		"prefix": ["it"],
 		"body": [
@@ -151,6 +216,14 @@
 		"description": "it with async."
 	},
 
+	"it-with-expect": {
+		"prefix": ["itwe"],
+		"body": [
+			"it('$1', () => {", "\texpect($2)", "})"
+		],
+		"description": "it with expect statement."
+	},
+
     "test": {
 		"prefix": ["tes"],
 		"body": [
@@ -197,5 +270,13 @@
 			"test('$1', async () => {", "\t$2", "})"
 		],
 		"description": "test with async."
+	},
+
+	"test-with-expect": {
+		"prefix": ["twe", "testwe"],
+		"body": [
+			"test('$1', () => {", "\texpect($2)", "})"
+		],
+		"description": "test with expect statement."
 	}
 }

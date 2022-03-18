@@ -27,16 +27,23 @@ describe('snippets test suite', () => {
         const findDuplicates = arr => arr.filter((item, index) => arr.indexOf(item) != index)
         expect(findDuplicates(allPrefixes)).toHaveLength(0)
     })
+    
+    it('should always have a tabstop in the body', () => {
+        keys.forEach((item) => expect(snippets[item]['body'].join("")).toContain("$1"))
+    })
 
     it('should have corresponding name in description attribute', () => {
         keys.forEach((item) => {
             const keyword = item.split("-")[0]
-            expect(snippets[item]['description']).toMatch(new RegExp(keyword));
+            expect(snippets[item]['description']).toContain(keyword)
         })
     })
 
-    it('should always have a tabstop in the body', () => {
-        keys.forEach((item) => expect(snippets[item]['body'].join("")).toContain("$1"))
+    it('should have corresponding name in body attribute', () => {
+        keys.forEach((item) => {
+            const keyword = item.split("-")[0]
+            expect(snippets[item]['body'].join("")).toContain(keyword)
+        })
     })
 
 })
