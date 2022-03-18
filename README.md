@@ -1,4 +1,7 @@
 # Jest Better Snippets
+
+<img src="./assets/demo.gif" alt="Demo of snippets GIF." align="right" />
+
 <div>
   
 ![Release](https://img.shields.io/badge/release-soon-orange)
