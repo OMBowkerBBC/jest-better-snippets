@@ -1,0 +1,20 @@
+{
+    "name": "jest-better-snippets",
+    "displayName": "Jest Better Snippets",
+    "description": "Snippets for the Jest testing library.",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.65.0"
+    },
+    "categories": [
+        "Snippets"
+    ],
+    "contributes": {
+        "snippets": [
+            {
+                "language": "javascript",
+                "path": "./snippets/snippets.code-snippets"
+            }
+        ]
+    }
+}
