@@ -199,7 +199,6 @@
 		"description": "describe with test async."
 	},
 
-
 	"describe-everything-it": {
 		"prefix": ["dei", "descei"],
 		"body": [

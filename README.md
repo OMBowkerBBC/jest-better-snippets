@@ -1,65 +1,106 @@
-# jest-better-snippets README
+# Jest Better Snippets
+<div>
+  
+![Release](https://img.shields.io/badge/release-soon-orange)
+![Node Version](https://img.shields.io/badge/node-v14.18.3-brightgreen)
+![npm Version](https://img.shields.io/badge/npm-6.14.15-brightgreen)
+  
+</div>
 
-This is the README for your extension "jest-better-snippets". After writing up a brief description, we recommend including the following sections.
+Jest Better Snippets is my attempt at speeding up the development of test writing in the Javascript [Jest](https://jestjs.io/) framework. I primarily use vscode however I may try and port this to other IDEs such as Atom in the future.
 
-## Features
+Feel free to clone this and add whatever you want, or send me some ideas of things that you'd find helpful and I'll add them to the list.
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+### Testing ![Tests](https://img.shields.io/badge/tests-passing-brightgreen)
+The github repo associated with this extension tests the current snippets to make sure they all follow the same guidelines.
 
-For example if there is an image subfolder under your extension project workspace:
+###### To Run
+`npm i` &#10140; `npm test`
 
-\!\[feature X\]\(images/feature-x.png\)
+### Documentation
+This documentation covers the raw commands and not the placeholders that are put in place. A lot of options that are not specified as async have the option to be async through tab stop placeholder.
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+#### Describe Snippets
+|  Trigger | Content                       |
+| -------: | ----------------------------- |
+|  `des`   | `describe()`                  |
+|  `dese`  | `describe.each()`             |
+|  `deso`  | `describe.only()`             |
+|  `dess`  | `describe.skip()`             |
+|  `desa`  | `describe(async)`             |
+|  `daa`   | `describe(afterAll())`        |
+|  `daaa`  | `describe(afterAll(async))`   |
+|  `dae`   | `describe((afterEach()))`     |
+|  `daea`  | `describe(afterEach(async))`  |
+|  `dba`   | `describe(beforeAll())`       |
+|  `dbaa`  | `describe(beforeAll(async))`  |
+|  `dbe`   | `describe(beforeEach())`      |
+|  `dbea`  | `describe(beforeEach(async))` |
+|  `di`    | `describe(it())`              |
+|  `dia`   | `describe(it(async))`         |
+|  `dt`    | `describe(test())`            |
+|  `dta`   | `describe(test(async))`       |
 
-## Requirements
+#### It Snippets
+|  Trigger | Content                 |
+| -------: | ----------------------- |
+|  `it`    | `it()`                  |
+|  `ite`   | `it.each()`             |
+|  `ito`   | `it.only()`             |
+|  `its`   | `it.skip()`             |
+|  `itt`   | `it.todo()`             |
+|  `ita`   | `it(async)`             |
+|  `itwe`  | `it(exepct())`          |
+|  `it2`   | `it()` `it()`           |
+|  `it2a`  | `it(async)` `it(async)` |
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+#### Test Snippets
+|  Trigger | Content                     |
+| -------: | --------------------------- |
+|  `tes`   | `test()`                    |
+|  `tese`  | `test.each()`               |
+|  `teso`  | `test.only()`               |
+|  `tess`  | `test.skip()`               |
+|  `testt` | `test.todo()`               |
+|  `tesa`  | `test(async)`               |
+|  `twe`   | `test(expect())`            |
+|  `t2`    | `test()` `test()`           |
+|  `t2a`   | `test(async)` `test(async)` |
 
-## Extension Settings
+#### Setup/Teardown Snippets
+|  Trigger | Content             |
+| -------: | ------------------- |
+|  `aa`    | `afterAll()`        |
+|  `aaa`   | `afterAll(async)`   |
+|  `ae`    | `afterEach()`       |
+|  `aea`   | `afterEach(async)`  |
+|  `ba`    | `beforeAll()`       |
+|  `baa`   | `beforeAll(async)`  |
+|  `be`    | `beforeEach()`      |
+|  `bea`   | `beforeEach(async)` |
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+#### Turbo Snippets
+###### Describe Everything It/Test (dei/det)
+```javascript
+describe('suite description', () => {
+    afterAll(async () => {
+        
+    })
 
-For example:
+    afterEach(async () => {
+        
+    })
 
-This extension contributes the following settings:
+    beforeAll(async () => {
+        
+    })
 
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
+    beforeEach(async () => {
+        
+    })
 
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
------------------------------------------------------------------------------------------------------------
-
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
-
-### For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+    it('test description', async () => {
+        expect()
+    })
+})
+```
